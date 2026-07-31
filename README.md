@@ -79,6 +79,12 @@ Proveedores soportados, priorizando lo gratuito:
 | **OpenAI y compatibles** | según proveedor (Groq y OpenRouter tienen modelos gratis) | pones URL base y modelo |
 | **Anthropic Claude** | de paga, centavos por corrida | único con llamada directa desde navegador verificada |
 
+El botón **Probar mi key** hace una llamada mínima y dice de una vez si el proveedor la
+acepta, sin tener que dictar algo primero. Como el campo se ve de contraseña, el navegador a
+veces lo rellena solo con una contraseña guardada: por eso está el **ver** de al lado, y por
+eso el encabezado de la tarjeta dice cuántos caracteres tiene la key que va a salir —una de
+Google Gemini empieza con `AIza` y mide 39.
+
 Qué sale del navegador, según la tarea:
 
 - **Desenredar direcciones del Excel**: solo dirección, colonia, C.P., municipio y estado.
