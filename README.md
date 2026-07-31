@@ -27,15 +27,32 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 
 1. Entra a **[eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa](https://eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa/)**
 2. Sube tu archivo Excel con el listado de domicilios.
-3. Elige la casa o casas que quieras y genera su ficha.
-4. Imprime o guarda como PDF desde el navegador (`Ctrl/Cmd + P`).
+3. Revisa el empate de columnas que la app propone (el paso 3 marca en naranja lo que reconoció).
+4. Elige la casa o casas que quieras y genera su ficha.
+5. Imprime o guarda como PDF desde el navegador (`Ctrl/Cmd + P`).
 
 ## ✨ Características
 
 - **Un solo archivo** (`index.html`) — no depende de librerías externas ni de instalación.
 - **Lee Excel directamente** en el navegador, sin subir datos a ningún servidor.
+- **Encuentra sola la hoja y la fila de encabezados**: de un libro con varias pestañas
+  (respaldos, catálogos, instrucciones) abre la que trae los domicilios, aunque el
+  encabezado no esté en la primera fila.
+- **Empata las columnas automáticamente** contra los campos de la ficha, y recuerda las
+  correcciones que hagas para la próxima vez.
+- **Conserva las ligas del Sheet**: los enlaces de Google Maps y las carpetas de Drive que
+  cuelgan de una celda quedan como enlaces vivos dentro del PDF.
 - **Edición por domicilio** antes de generar la ficha final.
 - **Exportación a PDF** usando la función de impresión del navegador.
+
+## 📋 Qué lleva la ficha
+
+Encabezado (folio, cartera, ruta, orden de visita, estatus), domicilio completo
+(calle, colonia, C.P., municipio, entidad y cómo llegar), acreditado, datos del expediente
+(exp. judicial y digital, juzgado, etapa judicial, folio real, crédito, carta poder, predial),
+fechas clave (asignación, desalojo, convenio), el desglose de dinero y las seis etapas de
+seguimiento con sus firmas. Los campos que tu archivo no traiga salen como línea en blanco
+para llenarse a mano.
 
 ## 🛠️ Uso local
 
