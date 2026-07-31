@@ -45,8 +45,32 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 - **Filtro por estatus de ruta**: como los líderes mueven el estatus desde la app de campo,
   cada estatus es una casilla que puedes apagar para dejarlo fuera de la corrida. Las casas
   ya **Recuperada** se descartan al leer el archivo y no llegan a la lista.
+- **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
+  del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
 - **Edición por domicilio** antes de generar la ficha final.
 - **Exportación a PDF** usando la función de impresión del navegador.
+
+## 🤖 IA opcional (tu propia API key)
+
+Sirve para una sola cosa: **desenredar las direcciones que llegan pegadas**, del tipo
+`AV BOGOTA275SANTA FE00630TLAJOMULCO DE ZUNIGA45653STMJL`. Todo lo demás —incluida la liga de
+Maps— se resuelve sin IA, gratis y sin llamadas.
+
+Como el proyecto es un archivo estático en GitHub Pages, **no existe un servidor donde
+esconder una API key**: cualquier key en el código sería pública. Por eso la pones tú y se
+guarda únicamente en el `localStorage` de tu navegador. Nunca hay una key en este repositorio.
+
+Proveedores soportados, priorizando lo gratuito:
+
+| Proveedor | Costo | Nota |
+|---|---|---|
+| **Google Gemini** | capa gratuita permanente | key en `aistudio.google.com/apikey`; tope por minuto |
+| **OpenAI y compatibles** | según proveedor (Groq y OpenRouter tienen modelos gratis) | pones URL base y modelo |
+| **Anthropic Claude** | de paga, centavos por corrida | único con llamada directa desde navegador verificada |
+
+De cada domicilio se envía **solo dirección, colonia, C.P., municipio y estado**. Nunca el
+nombre del acreditado, el crédito, el expediente ni los montos. Lo que la IA reescriba queda
+marcado como edición tuya y se puede deshacer en bloque.
 
 ## 📋 Qué lleva la ficha
 
