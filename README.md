@@ -44,9 +44,14 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   cuelgan de una celda quedan como enlaces vivos dentro del PDF.
 - **Filtro por estatus de ruta**: como los líderes mueven el estatus desde la app de campo,
   cada estatus es una casilla que puedes apagar para dejarlo fuera de la corrida. Las casas
-  ya **Recuperada** se descartan al leer el archivo y no llegan a la lista.
+  ya **Recuperada** entran con su casilla apagada: no estorban en la corrida del día, pero
+  ahí están para prenderlas cuando quieras consultarlas o reimprimir su ficha.
 - **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
+- **Código QR en la ficha impresa** con esa misma liga, para que en la calle se escanee con
+  el celular en lugar de teclear la dirección. Se dibuja en el navegador, sin librerías ni
+  servicios de terceros. Si la liga del Sheet trae coordenadas, el QR carga las coordenadas:
+  apunta al pin exacto y además queda más chico, o sea más fácil de leer.
 - **Edición por domicilio** antes de generar la ficha final.
 - **Exportación a PDF** usando la función de impresión del navegador.
 
@@ -96,11 +101,17 @@ Lo que la IA escriba queda marcado como edición tuya y se puede deshacer en blo
 ## 📋 Qué lleva la ficha
 
 Encabezado (folio, cartera, ruta, orden de visita, estatus), domicilio completo
-(calle, colonia, C.P., municipio, entidad y cómo llegar), acreditado, datos del expediente
-(exp. judicial y digital, juzgado, etapa judicial, folio real, crédito, carta poder, predial),
-fechas clave (asignación, desalojo, convenio), el desglose de dinero y las seis etapas de
-seguimiento con sus firmas. Los campos que tu archivo no traiga salen como línea en blanco
-para llenarse a mano.
+(calle, colonia, C.P., municipio, entidad, cómo llegar y su QR), acreditado, expediente
+judicial y digital, fechas clave (asignación, desalojo, convenio), carta poder y predial,
+el desglose de dinero y las seis etapas de seguimiento con sus firmas. Los campos que tu
+archivo no traiga salen como línea en blanco para llenarse a mano.
+
+La hoja impresa se recortó a lo que de veras se usa en campo: ya no salen N° de expediente,
+juzgado, N° de crédito, folio real, etapa judicial, acreedor, presupuesto autorizado ni
+monto total, la fecha de recuperación se cambió por la de desalojo, y en la etapa 3 el total
+de materiales se cambió por honorarios. **Nada de eso se perdió**: se siguen leyendo del
+Excel y se siguen pudiendo editar por domicilio; nada más dejaron de ocupar lugar en la hoja.
+La etapa 4 quedó sin firma y con tres recuadros de foto de cada lado.
 
 ## 🛠️ Uso local
 
