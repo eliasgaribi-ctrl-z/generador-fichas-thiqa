@@ -12,6 +12,11 @@
 
 ---
 
+
+<div align="center">
+<img src="docs/screenshot.png" alt="Vista previa del Generador de Fichas THIQA" width="800">
+</div>
+
 ## ¿Qué hace?
 
 Este proyecto es una sola página web (`index.html`) que lee un archivo Excel con el listado de domicilios y genera, para cada uno, una **ficha lista para imprimir o guardar como PDF**: dirección, datos de la cartera, folio, y demás información de seguimiento.
