@@ -43,8 +43,10 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 - **Conserva las ligas del Sheet**: los enlaces de Google Maps y las carpetas de Drive que
   cuelgan de una celda quedan como enlaces vivos dentro del PDF.
 - **Filtro por estatus de ruta**: como los líderes mueven el estatus desde la app de campo,
-  cada estatus es una casilla que puedes apagar para dejarlo fuera de la corrida. Las casas
-  ya **Recuperada** se descartan al leer el archivo y no llegan a la lista.
+  cada estatus es una casilla que puedes prender o apagar. Llegan prendidas **Próximas
+  Recuperaciones** y **Recuperadas** —las que ya tienen el convenio confirmado, que son las
+  que ameritan ficha—; los demás estatus llegan apagados y basta prender su casilla para
+  meterlos en la corrida. Ninguna casa se descarta al leer el archivo.
 - **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
 - **Edición por domicilio** antes de generar la ficha final.
