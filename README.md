@@ -42,6 +42,12 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   correcciones que hagas para la próxima vez.
 - **Conserva las ligas del Sheet**: los enlaces de Google Maps y las carpetas de Drive que
   cuelgan de una celda quedan como enlaces vivos dentro del PDF.
+- **El domicilio sale de la columna Link**: ahí la celda guarda el texto de la dirección ya
+  corregida y la liga de Maps cuelga aparte, mientras que la columna de domicilio suele venir
+  pegada (`AV TEMUCO286SANTA FE00630TLAJOMULCO`). Se usa el texto de Link cuando lo hay; si
+  está vacío —o si trae una URL en vez de una dirección— manda la columna de domicilio.
+- **Buscador por palabras sueltas**: escribes los datos que te acuerdes, en cualquier orden
+  (`cerro 129`), y busca en folio, domicilio, colonia, municipio, ruta y cuadrilla.
 - **Filtro por estatus de ruta**: como los líderes mueven el estatus desde la app de campo,
   cada estatus es una casilla que puedes prender o apagar. Llegan prendidas **Próximas
   Recuperaciones** y **Recuperadas** —las que ya tienen el convenio confirmado, que son las
