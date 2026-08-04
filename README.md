@@ -55,6 +55,12 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   meterlos en la corrida. Ninguna casa se descarta al leer el archivo.
 - **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
+- **Control de obra (opcional)**: el área de obras lleva su propio Excel de tapeados y ahí
+  no hay folio, así que las dos tablas se unen por dirección —número de casa más las
+  palabras de la calle, ignorando el relleno y el sufijo de manzana o lote—. De ahí salen
+  solos los materiales con su unidad (`260 pz`, `13 sacos`), las medidas de tapeo y el
+  total. Si una vivienda trae tapeo y retapeo se suman en una sola ficha y la nota lo dice.
+  Lo que capturaste a mano siempre gana.
 - **Edición por domicilio** antes de generar la ficha final.
 - **Exportación a PDF** usando la función de impresión del navegador.
 
