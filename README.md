@@ -57,7 +57,9 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
 - **Control de obra (opcional)**: el área de obras lleva su propio Excel de tapeados y ahí
   no hay folio, así que las dos tablas se unen por dirección —número de casa más las
-  palabras de la calle, ignorando el relleno y el sufijo de manzana o lote—. De ahí salen
+  palabras de la calle, ignorando el relleno y la cola que arrastra el domicilio: el C.P.
+  que viene en el texto de la liga de Maps y el dato catastral de la cartera
+  (`NA MZ 17 LT 39 EDIF NA NIV 03`), que traen números que no son el de la casa—. De ahí salen
   solos los materiales con su unidad (`260 pz`, `13 sacos`), las medidas de tapeo y el
   total. Si una vivienda trae tapeo y retapeo se suman en una sola ficha y la nota lo dice.
   Lo que capturaste a mano siempre gana.
