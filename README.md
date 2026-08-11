@@ -19,7 +19,10 @@
 
 ## ¿Qué hace?
 
-Este proyecto es una sola página web (`index.html`) que lee un archivo Excel con el listado de domicilios y genera, para cada uno, una **ficha lista para imprimir o guardar como PDF**: dirección, datos de la cartera, folio, y demás información de seguimiento.
+Este proyecto es una sola página web (`index.html`) que lee un archivo Excel con el listado de domicilios y genera, para cada uno, un **documento listo para imprimir o guardar como PDF**. De la misma selección salen dos:
+
+- La **ficha de seguimiento**: hoja completa por domicilio, con dirección, datos de la cartera, folio, dinero y las seis etapas para firmar.
+- La **carátula del expediente físico**: la portada de la carpeta que se archiva. Media hoja, dos por hoja carta, y trae nada más lo que se lee de canto en el archivero.
 
 No requiere servidor, cuenta ni instalación — se abre directo en el navegador.
 
@@ -28,12 +31,16 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 1. Entra a **[eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa](https://eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa/)**
 2. Sube tu archivo Excel con el listado de domicilios.
 3. Revisa el empate de columnas que la app propone (el paso 3 marca en naranja lo que reconoció).
-4. Elige la casa o casas que quieras y genera su ficha.
-5. Imprime o guarda como PDF desde el navegador (`Ctrl/Cmd + P`).
+4. Elige la casa o casas que quieras.
+5. En la barra de abajo elige qué documento quieres —**ficha de seguimiento** o **carátula de expediente**— y genera el PDF.
+6. Imprime o guarda como PDF desde el navegador (`Ctrl/Cmd + P`).
 
 ## ✨ Características
 
 - **Un solo archivo** (`index.html`) — no depende de librerías externas ni de instalación.
+- **Dos documentos del mismo Excel**: la ficha de seguimiento y la carátula del expediente
+  físico. Se elige en la barra de abajo y se cambia cuando quieras: los datos, los filtros,
+  la selección y lo que hayas editado a mano son los mismos para las dos.
 - **Lee Excel directamente** en el navegador, sin subir datos a ningún servidor.
 - **Encuentra sola la hoja y la fila de encabezados**: de un libro con varias pestañas
   (respaldos, catálogos, instrucciones) abre la que trae los domicilios, aunque el
@@ -65,6 +72,37 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   Lo que capturaste a mano siempre gana.
 - **Edición por domicilio** antes de generar la ficha final.
 - **Exportación a PDF** usando la función de impresión del navegador.
+
+## 📂 Carátula del expediente físico
+
+La carpeta que se archiva necesita portada, y esa portada no es la ficha: no lleva acreditado,
+ni crédito, ni juzgado, ni las seis etapas. Lleva lo que se busca hojeando el archivero.
+
+Sale del mismo Excel y de la misma selección — **no pide ninguna columna nueva**. Se elige en
+la barra de abajo, junto al botón de generar, y trae:
+
+- **Estatus** en el recuadro del encabezado.
+- **Domicilio completo** en un renglón: calle, colonia, C.P., municipio y entidad. Como el
+  texto de la columna Link ya suele traer la colonia y el municipio dentro
+  (*“Av. Temuco 286, Santa Fe”*), cada parte se agrega nada más si no está dicha, para que no
+  salga repetida.
+- **Fuente, cuadrilla y ruta.**
+- **Monto acordado** —el mismo que la ficha usa arriba—, **fecha de desocupación** (la de
+  desalojo acordada) y **fecha de convenio**.
+- Las casillas de **contenido del expediente**: convenio, solicitud de pago, convenio Thiqa,
+  INE, acta de entrega, honorarios pagados y firma finalizado. Van sin palomear, porque se
+  marcan conforme se mete el papel a la carpeta.
+
+Cada carátula ocupa **media hoja carta y salen dos por hoja**, con línea punteada de por medio
+para cortarlas. Si la selección es impar, la última hoja se va con la mitad de abajo en blanco.
+Lo que el archivo no traiga sale como recuadro vacío para llenarlo a mano.
+
+En modo carátula el editor muestra sólo esos campos —de nada sirve corregir el juzgado en un
+papel donde el juzgado no sale— y la vista previa cambia a media hoja. Al volver a la ficha
+está todo otra vez. El documento elegido se recuerda para la próxima.
+
+El formato tal cual, para abrirlo y llenarlo a mano sin pasar por el Excel, está en
+[`plantilla-caratula-expediente.html`](plantilla-caratula-expediente.html).
 
 ## 🎙️ Dictar fichas sin Excel
 
@@ -117,6 +155,10 @@ Encabezado (folio, cartera, ruta, orden de visita, estatus), domicilio completo
 fechas clave (asignación, desalojo, convenio), el desglose de dinero y las seis etapas de
 seguimiento con sus firmas. Los campos que tu archivo no traiga salen como línea en blanco
 para llenarse a mano.
+
+La carátula del expediente físico lleva mucho menos, a propósito: nada más domicilio, fuente,
+cuadrilla, ruta, monto, las dos fechas y las casillas del contenido de la carpeta. El detalle
+está [más arriba](#-carátula-del-expediente-físico).
 
 ## 🛠️ Uso local
 
