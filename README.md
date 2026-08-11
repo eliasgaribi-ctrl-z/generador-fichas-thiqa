@@ -48,7 +48,10 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 - **Empata las columnas automáticamente** contra los campos de la ficha, y recuerda las
   correcciones que hagas para la próxima vez.
 - **Conserva las ligas del Sheet**: los enlaces de Google Maps y las carpetas de Drive que
-  cuelgan de una celda quedan como enlaces vivos dentro del PDF.
+  cuelgan de una celda quedan como enlaces vivos dentro del PDF. Se leen de las dos formas en
+  que el Sheet las exporta: como hipervínculo de Excel y como fórmula `=HYPERLINK("…")`, que
+  es la que usa Google cuando la liga se armó con fórmula. En la bitácora maestra eso son
+  **214 carpetas de expediente digital y 125 mapas** que antes se perdían enteros.
 - **El domicilio sale de la columna Link**: ahí la celda guarda el texto de la dirección ya
   corregida y la liga de Maps cuelga aparte, mientras que la columna de domicilio suele venir
   pegada (`AV TEMUCO286SANTA FE00630TLAJOMULCO`). Se usa el texto de Link cuando lo hay; si
@@ -92,6 +95,28 @@ la barra de abajo, junto al botón de generar, y trae:
 - Las casillas de **contenido del expediente**: convenio, solicitud de pago, convenio Thiqa,
   INE, acta de entrega, honorarios pagados y firma finalizado. Van sin palomear, porque se
   marcan conforme se mete el papel a la carpeta.
+- Un **código QR** que abre la carpeta de ese folio en Drive: se escanea con la cámara del
+  celular parado frente al archivero, sin buscar el folio en el Sheet.
+
+### El QR
+
+Sale de la liga que ya trae el Sheet, no de un servicio de internet: el código se arma dentro
+del navegador, así que funciona sin conexión, no le manda la liga de tu carpeta a nadie y en
+el PDF queda dibujado —no es una imagen que se pueda caer—.
+
+Apunta a la carpeta del **expediente judicial** (la columna del Sheet cuyo encabezado viene en
+blanco y cuyas celdas dicen `EXP. JUDICIAL BNC_HSBC_040`); si esa fila no trae liga, se va con
+la del **expediente digital**. Abajo del código dice a cuál de las dos lleva, para que nadie
+escanee esperando la otra. En la bitácora maestra son 212 al judicial y 2 al digital.
+
+Va lo menos apretado posible, que es lo que se lee bien en papel: nivel de corrección L y sin
+el `?usp=drive_link` que Drive le cuelga a sus ligas —15 caracteres que no hacen falta para
+abrir la carpeta y que brincarían el código de 33×33 módulos a 37×37—. Así los 214 salen
+iguales, de 33×33, a poco más de 2.5 cm por lado.
+
+El código va en el hueco que queda a la derecha de las casillas, sin mover nada de lo demás:
+siguen saliendo dos carátulas por hoja carta. Si una fila no trae ninguna liga, el recuadro
+del QR se quita y las casillas se estiran.
 
 Cada carátula ocupa **media hoja carta y salen dos por hoja**, con línea punteada de por medio
 para cortarlas. Si la selección es impar, la última hoja se va con la mitad de abajo en blanco.
