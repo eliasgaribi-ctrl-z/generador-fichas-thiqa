@@ -104,10 +104,10 @@ Sale de la liga que ya trae el Sheet, no de un servicio de internet: el código 
 del navegador, así que funciona sin conexión, no le manda la liga de tu carpeta a nadie y en
 el PDF queda dibujado —no es una imagen que se pueda caer—.
 
-Apunta a la carpeta del **expediente judicial** (la columna del Sheet cuyo encabezado viene en
-blanco y cuyas celdas dicen `EXP. JUDICIAL BNC_HSBC_040`); si esa fila no trae liga, se va con
-la del **expediente digital**. Abajo del código dice a cuál de las dos lleva, para que nadie
-escanee esperando la otra. En la bitácora maestra son 212 al judicial y 2 al digital.
+Apunta siempre a la carpeta del **expediente digital**, que es la carpeta del folio. En la
+bitácora maestra esa columna trae liga en las **214 filas**, así que el QR sale parejo en todas
+y siempre lleva al mismo lugar. Abajo del código lo dice, para que nadie escanee esperando otra
+cosa. Si una fila no trae liga, esa carátula sale sin QR.
 
 Va lo menos apretado posible, que es lo que se lee bien en papel: nivel de corrección L y sin
 el `?usp=drive_link` que Drive le cuelga a sus ligas —15 caracteres que no hacen falta para
