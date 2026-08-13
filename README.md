@@ -29,10 +29,12 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 ## 🚀 Usar la app
 
 1. Entra a **[eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa](https://eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa/)**
-2. Sube tu archivo Excel con el listado de domicilios.
-3. Revisa el empate de columnas que la app propone (el paso 3 marca en naranja lo que reconoció).
-4. Elige la casa o casas que quieras.
-5. En la barra de abajo elige qué documento quieres —**ficha de seguimiento** o **carátula de expediente**— y genera el PDF.
+2. Elige qué vas a imprimir: **ficha de seguimiento** o **carátula de expediente**. Se puede
+   cambiar cuando quieras, arriba en Datos o en la barra de abajo.
+3. Sube tu archivo Excel con el listado de domicilios.
+4. La app te dice cuántos domicilios leyó y cuántas columnas empató sola. Si algo no cuadra,
+   ábrelo en **Revisar columnas**; si no, sigue de largo.
+5. Elige la casa o casas que quieras y genera el PDF.
 6. Imprime o guarda como PDF desde el navegador (`Ctrl/Cmd + P`).
 
 ## ✨ Características
