@@ -67,6 +67,12 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   meterlos en la corrida. Ninguna casa se descarta al leer el archivo.
 - **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
+- **Código QR del mapa en la ficha impresa**, junto al domicilio: en papel la liga viva no
+  sirve de nada, y la idea es que en la calle se escanee con el celular en lugar de teclear
+  la dirección. Lleva exactamente la misma URL que el enlace, se dibuja aquí mismo —sin
+  librerías ni servicios de terceros— y va a 92 px porque de ahí para abajo los módulos
+  bajan de 0.4 mm en papel y la cámara empieza a batallar. No le quita lugar a nada: va al
+  costado de los dos paneles de arriba, que juntos ya median más que el código.
 - **Control de obra (opcional)**: el área de obras lleva su propio Excel de tapeados y ahí
   no hay folio, así que las dos tablas se unen por dirección —número de casa más las
   palabras de la calle, ignorando el relleno y la cola que arrastra el domicilio: el C.P.
@@ -187,12 +193,18 @@ Lo que la IA escriba queda marcado como edición tuya y se puede deshacer en blo
 
 ## 📋 Qué lleva la ficha
 
-Encabezado (folio, cartera, ruta, orden de visita, estatus), domicilio completo
-(calle, colonia, C.P., municipio, entidad y cómo llegar), acreditado, datos del expediente
-(exp. judicial y digital, juzgado, etapa judicial, folio real, crédito, carta poder, predial),
-fechas clave (asignación, desalojo, convenio), el desglose de dinero y las seis etapas de
-seguimiento con sus firmas. Los campos que tu archivo no traiga salen como línea en blanco
+Encabezado (cartera, ruta, folio, fecha y estatus), el domicilio con su código QR y las
+casillas de cartera, el dinero de la recuperación (monto, fecha, bono y honorario), el
+expediente digital con las fechas clave (asignación, desalojo, convenio) más carta poder y
+cuenta predial, el líder de cuadrilla con su foto, el presupuesto de honorarios y bonos, y
+las seis etapas de seguimiento con sus firmas —la 3 con el control de obra de tapeados y la
+4 con seis huecos de foto—. Los campos que tu archivo no traiga salen como línea en blanco
 para llenarse a mano.
+
+La hoja imprime menos de lo que lee, a propósito: número de expediente, juzgado, etapa
+judicial, folio real, número de crédito y acreedor **se siguen leyendo del Excel y se
+siguen pudiendo editar por domicilio**, nada más dejaron de ocupar lugar en el papel cuando
+se adoptó el formato oficial nuevo.
 
 La carátula del expediente físico lleva mucho menos, a propósito: nada más domicilio, fuente,
 cuadrilla, ruta, monto, las dos fechas y las casillas del contenido de la carpeta. El detalle
