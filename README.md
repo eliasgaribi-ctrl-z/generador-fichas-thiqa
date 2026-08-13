@@ -29,10 +29,12 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
 ## 🚀 Usar la app
 
 1. Entra a **[eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa](https://eliasgaribi-ctrl-z.github.io/generador-fichas-thiqa/)**
-2. Sube tu archivo Excel con el listado de domicilios.
-3. Revisa el empate de columnas que la app propone (el paso 3 marca en naranja lo que reconoció).
-4. Elige la casa o casas que quieras.
-5. En la barra de abajo elige qué documento quieres —**ficha de seguimiento** o **carátula de expediente**— y genera el PDF.
+2. Elige qué vas a imprimir: **ficha de seguimiento** o **carátula de expediente**. Se puede
+   cambiar cuando quieras, arriba en Datos o en la barra de abajo.
+3. Sube tu archivo Excel con el listado de domicilios.
+4. La app te dice cuántos domicilios leyó y cuántas columnas empató sola. Si algo no cuadra,
+   ábrelo en **Revisar columnas**; si no, sigue de largo.
+5. Elige la casa o casas que quieras y genera el PDF.
 6. Imprime o guarda como PDF desde el navegador (`Ctrl/Cmd + P`).
 
 ## ✨ Características
@@ -65,6 +67,12 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   meterlos en la corrida. Ninguna casa se descarta al leer el archivo.
 - **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
+- **Código QR del mapa en la ficha impresa**, junto al domicilio: en papel la liga viva no
+  sirve de nada, y la idea es que en la calle se escanee con el celular en lugar de teclear
+  la dirección. Lleva exactamente la misma URL que el enlace, se dibuja aquí mismo —sin
+  librerías ni servicios de terceros— y va a 92 px porque de ahí para abajo los módulos
+  bajan de 0.4 mm en papel y la cámara empieza a batallar. No le quita lugar a nada: va al
+  costado de los dos paneles de arriba, que juntos ya median más que el código.
 - **Control de obra (opcional)**: el área de obras lleva su propio Excel de tapeados y ahí
   no hay folio, así que las dos tablas se unen por dirección —número de casa más las
   palabras de la calle, ignorando el relleno y la cola que arrastra el domicilio: el C.P.
@@ -104,10 +112,10 @@ Sale de la liga que ya trae el Sheet, no de un servicio de internet: el código 
 del navegador, así que funciona sin conexión, no le manda la liga de tu carpeta a nadie y en
 el PDF queda dibujado —no es una imagen que se pueda caer—.
 
-Apunta a la carpeta del **expediente judicial** (la columna del Sheet cuyo encabezado viene en
-blanco y cuyas celdas dicen `EXP. JUDICIAL BNC_HSBC_040`); si esa fila no trae liga, se va con
-la del **expediente digital**. Abajo del código dice a cuál de las dos lleva, para que nadie
-escanee esperando la otra. En la bitácora maestra son 212 al judicial y 2 al digital.
+Apunta siempre a la carpeta del **expediente digital**, que es la carpeta del folio. En la
+bitácora maestra esa columna trae liga en las **214 filas**, así que el QR sale parejo en todas
+y siempre lleva al mismo lugar. Abajo del código lo dice, para que nadie escanee esperando otra
+cosa. Si una fila no trae liga, esa carátula sale sin QR.
 
 Va lo menos apretado posible, que es lo que se lee bien en papel: nivel de corrección L y sin
 el `?usp=drive_link` que Drive le cuelga a sus ligas —15 caracteres que no hacen falta para
@@ -150,13 +158,24 @@ Como el proyecto es un archivo estático en GitHub Pages, **no existe un servido
 esconder una API key**: cualquier key en el código sería pública. Por eso la pones tú y se
 guarda únicamente en el `localStorage` de tu navegador. Nunca hay una key en este repositorio.
 
-Proveedores soportados, priorizando lo gratuito:
+Proveedores soportados, priorizando lo gratuito. Cada uno ya trae puesta su URL base y un
+modelo que servía al momento de escribir esto, así que sólo hay que pegar la key:
 
 | Proveedor | Costo | Nota |
 |---|---|---|
-| **Google Gemini** | capa gratuita permanente | key en `aistudio.google.com/apikey`; tope por minuto |
-| **OpenAI y compatibles** | según proveedor (Groq y OpenRouter tienen modelos gratis) | pones URL base y modelo |
-| **Anthropic Claude** | de paga, centavos por corrida | único con llamada directa desde navegador verificada |
+| **Google Gemini** | capa gratuita permanente | key en `aistudio.google.com/apikey`; tope por minuto. El que menos se rompe |
+| **Groq** | capa gratuita, sin tarjeta | key en `console.groq.com/keys`; muy rápido |
+| **OpenRouter** | modelos gratis, sin tarjeta | key en `openrouter.ai/keys`; ~50 llamadas al día sin comprar créditos |
+| **Cerebras** | capa gratuita, sin tarjeta | key en `cloud.cerebras.ai`; el más rápido, pero 8 mil tokens por llamada |
+| **Otro compatible con OpenAI** | según proveedor | para DeepSeek, Together o un modelo en tu red; pones URL base y modelo |
+| **Anthropic Claude** | de paga, centavos por corrida | llamada directa desde el navegador verificada |
+
+> **Los modelos gratuitos se apagan seguido.** Groq retiró `llama-3.3-70b-versatile` en
+> agosto de 2026 y OpenRouter rota su lista cada semana, así que un modelo que servía el mes
+> pasado hoy puede contestar *"ese modelo ya no está"* aunque la key esté perfecta. Para eso
+> está el botón **Ver modelos**: le pregunta al proveedor cuáles está sirviendo en este
+> momento y los pone con un clic. Si algo deja de funcionar, ése es el primer botón que hay
+> que picar. Con OpenRouter viene puesto `openrouter/free`, que deja que ellos escojan uno vivo.
 
 El botón **Probar mi key** hace una llamada mínima y dice de una vez si el proveedor la
 acepta, sin tener que dictar algo primero. Como el campo se ve de contraseña, el navegador a
@@ -174,12 +193,18 @@ Lo que la IA escriba queda marcado como edición tuya y se puede deshacer en blo
 
 ## 📋 Qué lleva la ficha
 
-Encabezado (folio, cartera, ruta, orden de visita, estatus), domicilio completo
-(calle, colonia, C.P., municipio, entidad y cómo llegar), acreditado, datos del expediente
-(exp. judicial y digital, juzgado, etapa judicial, folio real, crédito, carta poder, predial),
-fechas clave (asignación, desalojo, convenio), el desglose de dinero y las seis etapas de
-seguimiento con sus firmas. Los campos que tu archivo no traiga salen como línea en blanco
+Encabezado (cartera, ruta, folio, fecha y estatus), el domicilio con su código QR y las
+casillas de cartera, el dinero de la recuperación (monto, fecha, bono y honorario), el
+expediente digital con las fechas clave (asignación, desalojo, convenio) más carta poder y
+cuenta predial, el líder de cuadrilla con su foto, el presupuesto de honorarios y bonos, y
+las seis etapas de seguimiento con sus firmas —la 3 con el control de obra de tapeados y la
+4 con seis huecos de foto—. Los campos que tu archivo no traiga salen como línea en blanco
 para llenarse a mano.
+
+La hoja imprime menos de lo que lee, a propósito: número de expediente, juzgado, etapa
+judicial, folio real, número de crédito y acreedor **se siguen leyendo del Excel y se
+siguen pudiendo editar por domicilio**, nada más dejaron de ocupar lugar en el papel cuando
+se adoptó el formato oficial nuevo.
 
 La carátula del expediente físico lleva mucho menos, a propósito: nada más domicilio, fuente,
 cuadrilla, ruta, monto, las dos fechas y las casillas del contenido de la carpeta. El detalle
