@@ -152,13 +152,24 @@ Como el proyecto es un archivo estático en GitHub Pages, **no existe un servido
 esconder una API key**: cualquier key en el código sería pública. Por eso la pones tú y se
 guarda únicamente en el `localStorage` de tu navegador. Nunca hay una key en este repositorio.
 
-Proveedores soportados, priorizando lo gratuito:
+Proveedores soportados, priorizando lo gratuito. Cada uno ya trae puesta su URL base y un
+modelo que servía al momento de escribir esto, así que sólo hay que pegar la key:
 
 | Proveedor | Costo | Nota |
 |---|---|---|
-| **Google Gemini** | capa gratuita permanente | key en `aistudio.google.com/apikey`; tope por minuto |
-| **OpenAI y compatibles** | según proveedor (Groq y OpenRouter tienen modelos gratis) | pones URL base y modelo |
-| **Anthropic Claude** | de paga, centavos por corrida | único con llamada directa desde navegador verificada |
+| **Google Gemini** | capa gratuita permanente | key en `aistudio.google.com/apikey`; tope por minuto. El que menos se rompe |
+| **Groq** | capa gratuita, sin tarjeta | key en `console.groq.com/keys`; muy rápido |
+| **OpenRouter** | modelos gratis, sin tarjeta | key en `openrouter.ai/keys`; ~50 llamadas al día sin comprar créditos |
+| **Cerebras** | capa gratuita, sin tarjeta | key en `cloud.cerebras.ai`; el más rápido, pero 8 mil tokens por llamada |
+| **Otro compatible con OpenAI** | según proveedor | para DeepSeek, Together o un modelo en tu red; pones URL base y modelo |
+| **Anthropic Claude** | de paga, centavos por corrida | llamada directa desde el navegador verificada |
+
+> **Los modelos gratuitos se apagan seguido.** Groq retiró `llama-3.3-70b-versatile` en
+> agosto de 2026 y OpenRouter rota su lista cada semana, así que un modelo que servía el mes
+> pasado hoy puede contestar *"ese modelo ya no está"* aunque la key esté perfecta. Para eso
+> está el botón **Ver modelos**: le pregunta al proveedor cuáles está sirviendo en este
+> momento y los pone con un clic. Si algo deja de funcionar, ése es el primer botón que hay
+> que picar. Con OpenRouter viene puesto `openrouter/free`, que deja que ellos escojan uno vivo.
 
 El botón **Probar mi key** hace una llamada mínima y dice de una vez si el proveedor la
 acepta, sin tener que dictar algo primero. Como el campo se ve de contraseña, el navegador a
