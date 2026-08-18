@@ -83,6 +83,9 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   solos los materiales con su unidad (`260 pz`, `13 sacos`), las medidas de tapeo y el
   total. Si una vivienda trae tapeo y retapeo se suman en una sola ficha y la nota lo dice.
   Lo que capturaste a mano siempre gana.
+- **Foto del domicilio en cada ficha**: se pega con `Ctrl+V`, se arrastra al recuadro o se
+  elige del disco —o de la galería, si abres la app en el celular—, y sale impresa en el PDF.
+  Se queda guardada en tu navegador, atada al domicilio, sin subirse a ningún lado.
 - **Edición por domicilio** antes de generar la ficha final.
 - **Exportación a PDF** usando la función de impresión del navegador.
 
@@ -222,6 +225,30 @@ eso la etapa 4 ya no lleva los seis huecos de antes y después, ni la 3 el de ma
 Queda uno solo y más grande, el del domicilio, abajo de los dos QR en el riel de la derecha:
 esa foto existe desde que se firma el convenio, o sea antes de imprimir, y por eso sí alcanza
 a salir en la hoja.
+
+### Cómo se le pone la foto
+
+La foto del domicilio no sale del Excel —ahí no hay columna que la traiga— y tampoco se baja
+de Drive: se le pone desde la app, en **Revisar una por una**. Abajo de la vista previa está
+la barra *Foto del domicilio*, y el recuadro de la hoja acepta la foto de tres maneras:
+
+- **Pégala con `Ctrl+V`.** Es el camino corto desde WhatsApp: copias la foto en el chat y la
+  pegas aquí, sin bajarla ni ir a buscarla a Descargas.
+- **Arrástrala al recuadro.** Sirve con WhatsApp de escritorio: la jalas del chat y la sueltas
+  en el hueco. Desde WhatsApp Web hay que darle *Descargar* primero y arrastrar el archivo.
+- **Elígela del disco**, con el botón, o **desde el celular**: si abres la app en el teléfono,
+  el botón abre la galería, que es donde WhatsApp ya dejó la foto, y desde ahí mismo generas
+  el PDF.
+
+La foto se queda pegada a ese domicilio, no a la fila del archivo, así que aunque vuelvas a
+subir el Excel la semana que entra sigue ahí. En la lista de domicilios cada casa que ya trae
+foto sale marcada **con foto**, para ver de un golpe cuáles faltan antes de generar.
+
+Se guarda en tu navegador, en la misma computadora: **no se sube a ningún lado** ni pasa por
+un servidor. Se guarda ya reducida a 900 px del lado largo —unos 90 KB— porque el hueco de la
+hoja mide poco más de dos pulgadas impresas: más resolución no se nota en papel y sí hace
+pesado un PDF de cuarenta hojas. La que no tenga foto sale con el recuadro punteado de
+siempre, para pegarle la impresa encima.
 
 ### El acomodo de la hoja
 
