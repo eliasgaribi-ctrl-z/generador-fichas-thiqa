@@ -67,12 +67,14 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   meterlos en la corrida. Ninguna casa se descarta al leer el archivo.
 - **Liga de Google Maps en cada ficha**, sin costo y sin salir del navegador: se respeta la
   del Sheet cuando existe y, si no, se arma con el domicilio, colonia, C.P. y municipio.
-- **Código QR del mapa en la ficha impresa**, junto al domicilio: en papel la liga viva no
-  sirve de nada, y la idea es que en la calle se escanee con el celular en lugar de teclear
-  la dirección. Lleva exactamente la misma URL que el enlace, se dibuja aquí mismo —sin
-  librerías ni servicios de terceros— y va a 92 px porque de ahí para abajo los módulos
-  bajan de 0.4 mm en papel y la cámara empieza a batallar. No le quita lugar a nada: va al
-  costado de los dos paneles de arriba, que juntos ya median más que el código.
+- **Dos códigos QR en la ficha impresa**, en el riel de la derecha: el primero abre el mapa
+  del domicilio y el segundo la carpeta del expediente digital, la misma que lleva la
+  carátula. En papel la liga viva no sirve de nada, y la idea es que en la calle se escanee
+  con el celular en lugar de teclear la dirección o ir a buscar el folio al Sheet. Llevan
+  exactamente la misma URL que los enlaces, se dibujan aquí mismo —sin librerías ni
+  servicios de terceros— y van a 92 px porque de ahí para abajo los módulos bajan de 0.4 mm
+  en papel y la cámara empieza a batallar. Si una fila no trae carpeta, esa ficha sale nada
+  más con el del mapa y el otro se quita entero.
 - **Control de obra (opcional)**: el área de obras lleva su propio Excel de tapeados y ahí
   no hay folio, así que las dos tablas se unen por dirección —número de casa más las
   palabras de la calle, ignorando el relleno y la cola que arrastra el domicilio: el C.P.
@@ -193,13 +195,18 @@ Lo que la IA escriba queda marcado como edición tuya y se puede deshacer en blo
 
 ## 📋 Qué lleva la ficha
 
-Encabezado (cartera, ruta, folio, fecha y estatus), el domicilio con su código QR y las
-casillas de cartera, el dinero de la recuperación (monto, fecha, bono y honorario), el
-expediente digital con las fechas clave (asignación, desalojo, convenio) más carta poder y
-cuenta predial, el líder de cuadrilla con su foto, el presupuesto de honorarios y bonos, un
-hueco grande para la foto del domicilio, y las seis etapas de seguimiento con sus firmas —la
-3 con el control de obra de tapeados—. Los campos que tu archivo no traiga salen como línea
+Encabezado (cartera, ruta, folio, fecha y estatus), el domicilio con las casillas de
+cartera, el dinero de la recuperación (monto, fecha, bono y honorario), el expediente digital
+con las fechas clave (asignación, desalojo, convenio) más carta poder y cuenta predial, el
+líder de cuadrilla con su foto, el presupuesto de honorarios y bonos, y las seis etapas de
+seguimiento con sus firmas —la 3 con el control de obra de tapeados—. Del lado derecho, en
+un riel del mismo ancho de arriba abajo, van los dos códigos QR —mapa y expediente— y el
+hueco grande de la foto del domicilio. Los campos que tu archivo no traiga salen como línea
 en blanco para llenarse a mano.
+
+Las casillas de cartera son cuatro: **BNC, INF, PIC y SOJI**. DAPA salió porque esa cartera
+ya no se llama así —es SOJI, Soluciones Jurídicas Infonavit—, y una fila que todavía traiga
+el nombre viejo palomea SOJI igual, para que no salga sin cartera marcada.
 
 La hoja imprime menos de lo que lee, a propósito: número de expediente, juzgado, etapa
 judicial, folio real, número de crédito y acreedor **se siguen leyendo del Excel y se
@@ -210,11 +217,25 @@ se adoptó el formato oficial nuevo.
 
 La hoja se imprime al firmar el convenio y de ahí se va a firmar a mano: para cuando hay
 avance de obra ya trae la firma del líder de cuadrilla y la de solicitud de recurso, así que
-reimprimirla nada más para pegarle las fotos de obra obligaba a volver a juntar firmas. Por eso
-la etapa 4 ya no lleva los seis huecos de antes y después, ni la 3 el de materiales. Queda
-uno solo y más grande, el del domicilio, junto al líder y al presupuesto: esa foto existe
-desde que se firma el convenio, o sea antes de imprimir, y por eso sí alcanza a salir en la
-hoja.
+reimprimirla nada más para pegarle las fotos de obra obligaba a volver a juntar firmas. Por
+eso la etapa 4 ya no lleva los seis huecos de antes y después, ni la 3 el de materiales.
+Queda uno solo y más grande, el del domicilio, abajo de los dos QR en el riel de la derecha:
+esa foto existe desde que se firma el convenio, o sea antes de imprimir, y por eso sí alcanza
+a salir en la hoja.
+
+### El acomodo de la hoja
+
+Lo que dejaron los huecos de foto no se quedó en blanco. Las etapas 4 y 5 quedaron pidiendo
+lo mismo —responsable, fecha y firma—, así que van juntas en un renglón como el par que son,
+y la 6 se quedó sola a lo ancho, que es el cierre. Las rayas donde se firma crecieron de 17 a
+21 px, porque la hoja se llena con pluma. Y las cuatro casillas de cartera se acomodaron en
+un cuadro de dos por dos, con lo que el domicilio se quedó con el renglón casi entero y cabe
+completo aunque venga con colonia, C.P. y municipio.
+
+El formato suelto, para imprimirlo en blanco y llenarlo a mano sin pasar por el Excel, está
+en [`plantilla-ficha.html`](plantilla-ficha.html) y sale de la misma plantilla que usa la
+app. Ese va sin los QR: sin domicilio ni carpeta capturados no hay de dónde sacarlos, y un
+recuadro de código vacío no se llena con pluma.
 
 ### Responsable arriba, firma abajo
 
