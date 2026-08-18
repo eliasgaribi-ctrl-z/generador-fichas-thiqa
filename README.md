@@ -196,15 +196,32 @@ Lo que la IA escriba queda marcado como edición tuya y se puede deshacer en blo
 Encabezado (cartera, ruta, folio, fecha y estatus), el domicilio con su código QR y las
 casillas de cartera, el dinero de la recuperación (monto, fecha, bono y honorario), el
 expediente digital con las fechas clave (asignación, desalojo, convenio) más carta poder y
-cuenta predial, el líder de cuadrilla con su foto, el presupuesto de honorarios y bonos, y
-las seis etapas de seguimiento con sus firmas —la 3 con el control de obra de tapeados y la
-4 con seis huecos de foto—. Los campos que tu archivo no traiga salen como línea en blanco
-para llenarse a mano.
+cuenta predial, el líder de cuadrilla con su foto, el presupuesto de honorarios y bonos, un
+hueco grande para la foto del domicilio, y las seis etapas de seguimiento con sus firmas —la
+3 con el control de obra de tapeados—. Los campos que tu archivo no traiga salen como línea
+en blanco para llenarse a mano.
 
 La hoja imprime menos de lo que lee, a propósito: número de expediente, juzgado, etapa
 judicial, folio real, número de crédito y acreedor **se siguen leyendo del Excel y se
 siguen pudiendo editar por domicilio**, nada más dejaron de ocupar lugar en el papel cuando
 se adoptó el formato oficial nuevo.
+
+### Una sola foto, la del domicilio
+
+La hoja se imprime al firmar el convenio y de ahí se va a firmar a mano: para cuando hay
+avance de obra ya trae la firma del líder de cuadrilla y la de solicitud de recurso, así que
+reimprimirla nada más para pegarle las fotos de obra obligaba a volver a juntar firmas. Por eso
+la etapa 4 ya no lleva los seis huecos de antes y después, ni la 3 el de materiales. Queda
+uno solo y más grande, el del domicilio, junto al líder y al presupuesto: esa foto existe
+desde que se firma el convenio, o sea antes de imprimir, y por eso sí alcanza a salir en la
+hoja.
+
+### Responsable arriba, firma abajo
+
+En cada etapa el nombre se pedía dos veces: arriba en **Responsable** y otra vez abajo en
+**Nombre y Firma**. Abajo quedó nada más **Firma**, que es lo único que se pone de puño y
+letra. La etapa 6 —entrega de honorarios— no tiene Responsable, así que ahí se sigue pidiendo
+el nombre junto con la firma.
 
 La carátula del expediente físico lleva mucho menos, a propósito: nada más domicilio, fuente,
 cuadrilla, ruta, monto, las dos fechas y las casillas del contenido de la carpeta. El detalle
