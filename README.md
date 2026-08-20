@@ -86,12 +86,19 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   pago, que también trae la palabra «material»— y te dice en pantalla de qué hoja salió y
   cuántos de tus domicilios empataron, para que un cero no pase de noche. Cuando el número
   de casa es el mismo y sólo cambia la letra (`178 D` y `178 E`) las trata como dos casas
-  distintas, que es lo que son. Lo que capturaste a mano siempre gana.
+  distintas, que es lo que son. Como la bitácora trae doscientos domicilios y el archivo de
+  tapeos quince, en Domicilios los que sí cubre salen marcados con **tapeo**, y al generar el
+  PDF se dice cuántas fichas van con la etapa 3 en blanco: así una hoja sin materiales se
+  distingue de un archivo mal leído. Lo que capturaste a mano siempre gana, con una
+  salvedad: vaciar un recuadro no es capturar un blanco, es volver al origen — se olvida la
+  corrección y vuelve a mandar lo que traiga el Excel o el control de obra.
 - **Foto del domicilio en cada ficha**: se pega con `Ctrl+V`, se arrastra al recuadro o se
   elige del disco —o de la galería, si abres la app en el celular—, y sale impresa en el PDF.
   Se queda guardada en tu navegador, atada al domicilio, sin subirse a ningún lado.
-- **Edición por domicilio** antes de generar la ficha final.
-- **Exportación a PDF** usando la función de impresión del navegador.
+- **Edición por domicilio** antes de generar la ficha final. Lo que corriges se guarda por
+  casa; para deshacer una corrección se vacía el recuadro y vuelve el dato del archivo.
+- **Exportación a PDF** usando la función de impresión del navegador, con el botón o
+  directo con `Ctrl/Cmd + P`: el atajo arma solo lo que esté seleccionado.
 
 ## 📂 Carátula del expediente físico
 
