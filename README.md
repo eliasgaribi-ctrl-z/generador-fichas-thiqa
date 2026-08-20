@@ -86,7 +86,10 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   pago, que también trae la palabra «material»— y te dice en pantalla de qué hoja salió y
   cuántos de tus domicilios empataron, para que un cero no pase de noche. Cuando el número
   de casa es el mismo y sólo cambia la letra (`178 D` y `178 E`) las trata como dos casas
-  distintas, que es lo que son. Lo que capturaste a mano siempre gana.
+  distintas, que es lo que son. Como la bitácora trae doscientos domicilios y el archivo de
+  tapeos quince, en Domicilios los que sí cubre salen marcados con **tapeo**, y al generar el
+  PDF se dice cuántas fichas van con la etapa 3 en blanco: así una hoja sin materiales se
+  distingue de un archivo mal leído. Lo que capturaste a mano siempre gana.
 - **Foto del domicilio en cada ficha**: se pega con `Ctrl+V`, se arrastra al recuadro o se
   elige del disco —o de la galería, si abres la app en el celular—, y sale impresa en el PDF.
   Se queda guardada en tu navegador, atada al domicilio, sin subirse a ningún lado.
