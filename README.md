@@ -82,7 +82,11 @@ No requiere servidor, cuenta ni instalación — se abre directo en el navegador
   (`NA MZ 17 LT 39 EDIF NA NIV 03`), que traen números que no son el de la casa—. De ahí salen
   solos los materiales con su unidad (`260 pz`, `13 sacos`), las medidas de tapeo y el
   total. Si una vivienda trae tapeo y retapeo se suman en una sola ficha y la nota lo dice.
-  Lo que capturaste a mano siempre gana.
+  Del libro entero busca la pestaña del calendario de obra —no la de los comprobantes de
+  pago, que también trae la palabra «material»— y te dice en pantalla de qué hoja salió y
+  cuántos de tus domicilios empataron, para que un cero no pase de noche. Cuando el número
+  de casa es el mismo y sólo cambia la letra (`178 D` y `178 E`) las trata como dos casas
+  distintas, que es lo que son. Lo que capturaste a mano siempre gana.
 - **Foto del domicilio en cada ficha**: se pega con `Ctrl+V`, se arrastra al recuadro o se
   elige del disco —o de la galería, si abres la app en el celular—, y sale impresa en el PDF.
   Se queda guardada en tu navegador, atada al domicilio, sin subirse a ningún lado.
